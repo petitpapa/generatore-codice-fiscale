@@ -24,7 +24,7 @@ public class ControlInteralNumber extends GeneratoreCodice {
 				if((i+1) % 2 == 0){
 					somma += Integer.parseInt(evenCharMap.get(c));
 				}
-				else {
+				else{
 					somma += Integer.parseInt(oddCharMap.get(c));
 				}
 			}

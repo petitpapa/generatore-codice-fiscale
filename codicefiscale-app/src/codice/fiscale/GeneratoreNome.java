@@ -2,7 +2,7 @@ package codice.fiscale;
 
 public abstract class GeneratoreNome extends GeneratoreCodice {
 	private static final String INSUFFICIENT_CHAR = "X";
-	protected String vowel = "aiueoyAIUEOY";
+	protected String vowel = "aiueoAIUEO";
 	protected int length = 0;
 
 	protected void generaCodice(Persona pers, StringBuilder soFar) {
@@ -14,7 +14,7 @@ public abstract class GeneratoreNome extends GeneratoreCodice {
 
 		if (checkLentgh(soFar)) {
 			for (int i = 0; i < consonant.length() && !done; i++) {
-				if (consonant.length() >= 4 && i == 1) 
+				if (soFar.length() > 3 && consonant.length() >= 4 && i == 1) 
 						continue;
 				soFar.append(consonant.charAt(i));
 				if (upperLimit(soFar))
